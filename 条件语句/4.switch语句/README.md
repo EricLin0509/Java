@@ -123,4 +123,52 @@ switch (day) {
 }
 ```
 
+## 运行多个语句
+
+### 基本语法
+```java
+switch (表达式) {
+    case 常量1 -> {
+        语句1;
+        语句2;
+        ...
+        语句n;
+    }
+    case 常量2 -> {
+        语句1;
+        语句2;
+        ...
+        语句n;
+    }
+    ...
+    default -> {
+        语句1;
+        语句2;
+        ...
+        语句n;
+    }
+}
+```
+
+### 代码示例
+
+```java
+switch (day) {
+    case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> {
+        System.out.println("It's a weekday");
+        System.out.println("Have a nice day");
+    }
+
+    case "Saturday", "Sunday" -> {
+        System.out.println("It's a weekend");
+        System.out.println("Have a nice weekend");
+    }
+
+    default -> System.out.println("Invalid day");
+}
+```
+
+#### 注意事项
+- `case` 语句后面的多个语句要用花括号括起来
+
 [源代码](enhancedswitch.java)
