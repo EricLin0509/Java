@@ -30,7 +30,7 @@ public class Car { // Car类
 // Main.java
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car(); // 创建一个Car对象
+        Car car = new Car(); // 创建一个Car对象，对象名为'car'
         System.out.println(car.menufacturer);
         System.out.println(car.model);
         System.out.println(car.year);
@@ -39,7 +39,7 @@ public class Main {
 }
 ```
 
-### 在对象中调用方法
+### 在新的类中添加方法
 
 ```java
 // Car.java
@@ -60,6 +60,8 @@ public class Car {
     }
 }
 ```
+
+### 在对象中调用方法
 
 ```java
 // Main.java
