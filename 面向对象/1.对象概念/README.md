@@ -68,7 +68,7 @@ public class Car {
 public class Main {
     public static void main(String[] args) {
         Car car = new Car();
-        car.start();
+        car.start(); // 调用对象的方法
         System.out.println(car.isRunning);
     }
 }
