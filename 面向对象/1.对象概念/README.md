@@ -10,13 +10,13 @@
 
 ## 代码示例
 
-**在Java中，`class`相当于一个用于创造对象的蓝图**
+**在Java中，类 (`class`) 相当于一个用于创造对象的蓝图**
 
-### 创建对象
+### 创建一个新的类用于创建对象
 
 ```java
 // Car.java
-public class Car {
+public class Car { // Car类
     String menufacturer = "BMW";
     String model = "E46 M3 CSL";
     int year = 2003;
@@ -24,13 +24,13 @@ public class Car {
 }
 ```
 
-### 引用对象
+### 创建对象
 
 ```java
 // Main.java
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
+        Car car = new Car(); // 创建一个Car对象
         System.out.println(car.menufacturer);
         System.out.println(car.model);
         System.out.println(car.year);
