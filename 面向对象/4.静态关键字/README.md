@@ -95,7 +95,7 @@ public class Main {
 }
 ```
 
-## 静态方法 (实用方法)
+## 静态方法
 
 ```java
 // test.java
