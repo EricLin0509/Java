@@ -66,6 +66,8 @@ The type Cat must implement the inherited abstract method Hunt.hunt()
 
 ### 实现接口中的方法
 
+由于接口中的方法**默认都是 `public` 的，所以在子类中也必须使用 `public` 修饰符**
+
 ```java
 // Cat.java
 
