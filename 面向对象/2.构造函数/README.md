@@ -143,7 +143,7 @@ true
 true
 ```
 
-### 在构造函数中创建方法
+### 在类中创建方法
 
 ```java
 // Students.java
@@ -175,10 +175,10 @@ public class Main {
     public static void main(String[] args) {
         
         Students students1 = new Students("John", 19, 3.5); // 调用构造函数
-        students1.enroll();
+        students1.enroll(); // 调用 Students 类中的 enroll 方法
 
         Students students2 = new Students("Jane", 20, 3.0); // 调用构造函数
-        students2.enroll();
+        students2.enroll(); // 调用 Students 类中的 enroll 方法
 
     }
 }
