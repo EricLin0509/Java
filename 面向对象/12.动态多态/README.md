@@ -60,7 +60,7 @@ public class Main {
 }
 ```
 
-虽说直接初始化 `Animal` 类会报错，但是我们可以创建一个抽象类但不初始化的对象
+虽说直接初始化 `Animal` 类会报错，但是我们可以使用抽象类创建一个未初始化的对象
 
 ```java
 // Main.java
@@ -68,7 +68,7 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
         
-        Animal animal; // 创建一个抽象类但不初始化的对象
+        Animal animal; // 使用抽象类创建一个未初始化的对象
 
     }
 }
@@ -86,7 +86,7 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
 
-        Animal animal; // 创建一个抽象类但不初始化的对象
+        Animal animal; // 使用抽象类创建一个未初始化的对象
 
         System.out.println("Enter animal type (1: dog, 2: cat): ");
 
@@ -109,18 +109,18 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
 
-        Animal animal; // 创建一个抽象类但不初始化的对象
+        Animal animal; // 使用抽象类创建一个未初始化的对象
 
         System.out.println("Enter animal type (1: dog, 2: cat): ");
 
         int choice = scanner.nextInt();
 
         if (choice == 1) {
-            animal = new Dog(); // 初始化 为 Dog 对象
+            animal = new Dog(); // 初始化为 Dog 对象
             animal.speak();
         }
         else if (choice == 2) {
-            animal = new Cat(); // 初始化 为 Cat 对象
+            animal = new Cat(); // 初始化为 Cat 对象
             animal.speak();
         }
         else {
