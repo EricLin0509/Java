@@ -32,5 +32,17 @@ public class stringmethod {
         System.out.println(str.contains(" ")); // 判断字符串是否包含指定字符
         
         System.out.println(str.equals("hello world!")); // 判断字符串是否相等
+
+        str = str.substring(1, 3); // 字符串截取，范围左闭右开，即 'ew'
+        System.out.println(str);
+
+        char chars[] = str.toCharArray(); // 字符串转字符数组
+        for (char c : chars) {
+            System.out.print(c);
+        }
+        System.out.println();
+
+        String str2 = String.valueOf(chars); // 字符数组转字符串
+        System.out.println(str2);
     }
 }
