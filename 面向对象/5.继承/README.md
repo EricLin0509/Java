@@ -30,6 +30,8 @@ public class Animal {
 
 这里我们创建一个名为 `Dog` 的子类，它继承了 `Animal` 类
 
+**注意：子类只能继承一个父类**
+
 ```java
 // Dog.java
 public class Dog extends Animal {

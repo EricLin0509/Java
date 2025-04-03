@@ -104,9 +104,9 @@ public class Main {
 }
 ```
 
-### 具体方法
+### 具体方法/普通方法
 
-与抽象方法相反的是具体方法 (concrete methods)，具体方法有方法体
+与抽象方法相反的是具体方法/普通方法 (concrete methods)，具体方法有方法体，不需要在子类中实现
 
 ```java
 // Shape.java

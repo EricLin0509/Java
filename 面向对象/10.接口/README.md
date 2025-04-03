@@ -83,6 +83,8 @@ public class Cat implements Hunt {
 
 ### 调用多个接口
 
+**与继承不同，一个类可以实现多个接口**
+
 ```java
 // Fish.java
 
@@ -124,3 +126,16 @@ The cat is hunting...
 The fish is hunting...
 The fish is swimming away...
 ```
+
+## 与抽象类的区别
+
+|     | 抽象类 | 接口 |
+| :--: | :---: | :---: |
+| 初始化 | 不能直接初始化 | 不能直接初始化 |
+| 方法 | 可以有普通方法 | 只能有抽象方法 |
+| 变量 | 可以有实例变量 | 只能有静态变量和final变量 |
+| 实现 | 子类使用extends关键字实现 | 子类使用implements关键字实现 |
+| 多继承 | 不支持多继承 | 支持多继承 |
+| 访问修饰符 | 可以使用public、protected和private修饰符 | 只能使用public修饰符 |
+| 用处 | 多个类有相同的属性和方法时 | 多个类实现相同的方法 |
+

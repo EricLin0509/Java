@@ -107,7 +107,7 @@ public class Main {
         car.go();
         bike.go();
 
-        Vehicle[] vehicles = new Car[]{car, bike};
+        Vehicle[] vehicles = new Vehicle[]{car, bike};
 
     }
 }
@@ -126,7 +126,7 @@ public class Main {
         car.go();
         bike.go();
 
-        Vehicle[] vehicles = new Car[]{car, bike};
+        Vehicle[] vehicles = new Vehicle[]{car, bike};
 
         for (Vehicle vehicle : vehicles) {
             vehicle.go();
