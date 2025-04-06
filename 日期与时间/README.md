@@ -84,9 +84,11 @@ public class Main {
 当前的时间戳: 2025-04-05T14:44:32.247571840Z
 ```
 
-### 格式化日期
+### 格式化日期与时间
 
-使用 `DateTimeFormatter` 可以将日期格式化为字符串
+使用 `DateTimeFormatter` 可以将日期或时间格式化为字符串
+
+可用在 `LocalDate`、`LocalTime`、`LocalDateTime` 中
 
 ```java
 import java.time.LocalDate;
@@ -106,6 +108,45 @@ public class Main {
 ```
 今天的日期: 2025-04-05
 日期格式化: 05/04/2025
+```
+
+```java
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+public class Main {
+    public static void main(String[] args) {
+        LocalTime time = LocalTime.now();
+        System.out.println("当前的时间: " + time);
+        DateTimeFormatter format2 = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String strTime = time.format(format2);
+        System.out.println("时间格式化: " + strTime);
+    }
+}
+```
+
+```
+当前的时间: 22:47:01.696885062
+时间格式化: 22:47:01
+```
+
+```java
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDateTime today = LocalDateTime.now();
+        System.out.println("今天的日期和时间: " + today);
+        DateTimeFormatter format3 = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String strDateTime = today.format(format3);
+        System.out.println("日期和时间格式化: " + strDateTime);
+    }
+}
+```
+
+```
+今天的日期和时间: 2025-04-05T22:48:29.696885062
+日期和时间格式化: 05-04-2025 22:48:29
 ```
 
 ### 自定义日期

@@ -22,6 +22,14 @@ public class Date {
         String dateFormatted = today.format(format1);
         System.out.println("日期格式化: " + dateFormatted);
 
+        DateTimeFormatter format2 = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String timeFormatted = time.format(format2);
+        System.out.println("时间格式化: " + timeFormatted);
+
+        DateTimeFormatter format3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String datatimeFormatted = datetime.format(format3);
+        System.out.println("日期和时间格式化: " + datatimeFormatted);
+
         LocalDate date = LocalDate.of(2025, 4, 4);
         System.out.println("自定义日期: " + date);
 
