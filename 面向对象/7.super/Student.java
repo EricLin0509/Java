@@ -7,4 +7,8 @@ public class Student extends Person {
         this.gpa = gpa;
     }
 
+    @Override
+    void showName() {
+        super.showName();
+    }
 }

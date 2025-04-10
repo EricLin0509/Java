@@ -9,7 +9,16 @@
 - 引用父类构造函数去初始化参数
 - **如果父类的构造函数没有参数，则不需要使用 `super`**
 
-## 示例
+`super` 有以下用法
+
+- 调用父类的构造函数
+- 调用父类的方法
+
+**注意：`super` 只能在子类中使用且只能在非静态方法中使用**
+
+## 代码示例
+
+## 调用父类的构造函数
 
 ### 创建一个父类
 
@@ -69,4 +78,41 @@ public class Student extends Person {
 
 }
 ```
+
+## 调用父类的方法
+
+```java
+// Person.java
+
+public class Person {
+    String first;
+    String last;
+    Person(String first, String last) {
+        this.first = first;
+        this.last = last;
+    }
+    void showName() {
+        System.out.println(first + " " + last);
+    }
+}
+```
+
+```java
+// Student.java
+
+public class Student extends Person {
+    double gpa;
+    Student(String firstName, String lastName, double gpa) {
+        super(firstName, lastName);
+        this.gpa = gpa;
+    }
+
+    @Override
+    void showName() {
+        super.showName();
+    }
+}
+```
+
+可以看到，即使子类重写了父类的方法，也可以使用 `super` 来调用父类的方法
 
