@@ -50,11 +50,13 @@ public class 类名<泛型标记符> {
     public 类名(泛型标记符 变量名) { // 构造函数
         this.变量名 = 变量名;
     }
-    public void 方法名(泛型标记符 变量名) { // 方法
+    public 返回值类型 方法名(泛型标记符 变量名) { // 方法
         System.out.println(变量名);
     }
 }
 ```
+
+**返回值类型可以是泛型**
 
 有以下几种泛型标记符
 
@@ -168,9 +170,18 @@ public class Main {
 Meow
 ```
 
-## 泛型方法
+## 泛型静态方法
 
-泛型也可以用于方法，比如 `public <T> void print(T value)` 表示 `print` 方法可以接收任何类型的参数
+泛型也可以用于静态方法
+
+```java
+public static <泛型标记符> 返回值类型 方法名(泛型标记符 变量名) {
+    方法体
+    ...
+}
+```
+
+比如 `public static <T> void print(T value)` 表示 `print` 方法可以接受传递多种类型的参数
 
 ```java
 public static <T> void print(T value) {
@@ -194,7 +205,7 @@ public static <T> T get(T value) {
 }
 ```
 
-## Wildcard
+## WildCard
 
 泛型也可以使用 `?` 来表示不确定的类型，比如 `List<?>` 表示 `List` 可以存储任何类型的对象
 

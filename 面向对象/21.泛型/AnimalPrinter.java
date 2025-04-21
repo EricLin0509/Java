@@ -6,4 +6,8 @@ public class AnimalPrinter <T extends Animal>  {
     public void print() {
         value.speak();
     }
+
+    public T getValue() {
+        return value;
+    }
 }
