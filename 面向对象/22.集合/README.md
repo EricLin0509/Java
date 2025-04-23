@@ -10,6 +10,8 @@
 
 - Queue 是一个有序的集合，在添加一个元素时，会按照一定的顺序将其插入队列中，而且允许有重复的元素
 
+- **List、Set 和 Queue 都属于接口**，它们的实现类有 ArrayList、LinkedList、HashSet、TreeSet 等
+
 ![Collections关系图](imgs/collections.png)
 
 ## List
@@ -74,6 +76,8 @@ list.push(1); // 添加元素到栈顶
 list.pop(); // 删除栈顶元素
 list.element(); // 获取栈顶元素
 ```
+
+- 相比 `add()`、`remove()`、`get()` 等方法，`offer()`、`poll()`、`peek()` 等方法更好用，因为它们**不会抛出异常**
 
 ## Queue
 

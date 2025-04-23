@@ -142,7 +142,7 @@ The dog is eating.
 
 使用 `Animal` 父类实例化 `Dog` 子类
 
-**注意：下转型对象需要强制转换**
+**注意：下转型对象需要强制转换，且只能转换为子类类型**
 
 ```java
 // Main.java
@@ -158,6 +158,26 @@ public class Main {
     }
 }
 ```
+
+### 尝试 `Dog` 下转型至 `Animal` 父类
+
+```java
+// Main.java
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        Dog dog = (Dog) animal; // 下转型对象
+    }
+}
+```
+这时候会报错：
+
+```
+Exception in thread "main" java.lang.ClassCastException: class Animal cannot be cast to class Dog (Animal and Dog are in unnamed module of loader 'app')
+```
+
+这是因为 `Animal` 不是 `Dog` 的子类，所以不能进行下转型
 
 ### 尝试 `Cat` 下转型至 `Dog` 子类
 
