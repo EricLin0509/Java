@@ -10,7 +10,7 @@
 方法名(
     (参数列表) -> {
         // 方法体
-    }
+    };
 )
 ```
 
@@ -26,6 +26,7 @@
 public interface Printable {
     void print();
 }
+```
 
 ```java
 // Cat.java
