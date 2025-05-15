@@ -110,6 +110,8 @@ public class main {
 
 使用 `Object.run()` 方法启动多个线程
 
+**注意：`Object.run()` 方法只会启动一个线程，多次调用 `Object.run()` 方法不会启动多个线程**
+
 ```java
 // main.java
 
@@ -135,8 +137,6 @@ public class main {
 4
 5
 ```
-
-**注意：`Object.run()` 方法不会启动线程，而是在当前线程中执行 `run()` 方法，所以不会同时执行多个线程**
 
 ### 线程的无序性
 
