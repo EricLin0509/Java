@@ -269,6 +269,52 @@ public class main {
 }
 ```
 
+#### 匿名类
+
+**使用匿名类可以方便地创建线程**
+
+```java
+//main.java
+
+public class main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            Runnable task = new Runnable() {
+                @Override
+                public void run() {
+                    for (int j = 1; j <= 5; j++) {
+                        System.out.println("Hello from thread " + j);
+                    }
+                }
+            };
+            Thread thread = new Thread(task);
+            thread.start();
+        }
+    }
+}
+```
+
+#### Lambda 表达式
+
+**使用 Lambda 表达式也可以方便地创建线程**
+
+```java
+//main.java
+
+public class main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 3; i++) {
+            Runnable task = () -> {
+                for (int j = 1; j <= 5; j++) {
+                    System.out.println("Hello from thread " + j);
+                }
+            };
+            Thread thread = new Thread(task);
+            thread.start();
+        }
+    }
+}
+
 ### 等待线程执行完成
 
 使用 `Object.join()` 方法等待线程执行完成
@@ -311,4 +357,34 @@ public class main {
         }
     }
 }
+```
+
+### 获取当前线程
+
+使用 `Thread.currentThread()` 方法获取当前线程
+
+**例如实现 `Runnable` 接口时，要获取当前线程，必须使用 `Thread.currentThread()` 方法**
+
+```java
+//myThread.java
+
+public class myThread implements Runnable {
+    private int id;
+    public myThread(int id) {
+        this.id = id;
+    }
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Hello from thread " + id + " " + Thread.currentThread().getName());
+        }
+    }
+}
+```
+
+```
+Hello from thread 1 Thread-0
+Hello from thread 1 Thread-0
+Hello from thread 1 Thread-0
+...
 ```
