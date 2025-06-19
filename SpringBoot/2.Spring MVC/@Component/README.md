@@ -56,9 +56,16 @@ Parameter 0 of constructor in com.example.colour.ColourApplication required a be
 
 ## 区别
 
-| 适用范围 | `@Configuration` | `@Component` |
-| :-------: | :--------------: | :-----------: |
-| 类       | 配置类          | Bean         |
-| 作用     | 用于配置 Spring Bean | 用于注册 Bean |
-| 位置     | 类上            | 类上或方法上  |
-| 依赖     | 无              | 有           |
+| 注解 | 核心目的 | 适用场景 |
+| :------: | :----------: | :----------: |
+| `@Configuration` | **显式声明Bean配置**，定义如何创建复杂的、需要控制的Bean | 专门用于配置类（如数据源、整合第三方组件） |
+| `@Component` | **通用组件扫描**，标记自动注册的Bean | 业务逻辑层（如`@Service`, `@Controller`, `@Repository`，由Spring自动管理生命周期） |
+
+### 使用场景
+
+| 场景 | 选择注解 |
+| :--------: | :----------: |
+| 定义需要手动初始化的Bean（如配置第三方库） | `@Configuration` + `@Bean` |
+| 多个Bean存在相互依赖，需保证单例 | `@Configuration`（避免`@Component`导致重复实例化） |
+| 业务逻辑组件（如Service、Mapper） | `@Component`或其派生注解（如`@Service`） |
+| 需要自动扫描并注入的普通类 | `@Component` |
